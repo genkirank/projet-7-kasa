@@ -1,25 +1,22 @@
-import PageError from './pageError'
-import '../../assets/App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './Home'
 import APropos from './APropos'
+import FicheLogements from './FicheLogements'
+import PageError from './PageError'
+import Home from './Home'
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/', // La page d'accueil
     element: <Home />,
-
-    errorElement: <PageError />,
-    children: [
-      {
-        path: '/fiche-Logement',
-        element: <ficheLogement />
-      },
-      {
-        path: '/A-Propos',
-        element: <APropos />
-      }
-    ]
+    errorElement: <PageError />
+  },
+  {
+    path: '/fichelogement', // Page FicheLogements
+    element: <FicheLogements />
+  },
+  {
+    path: '/a-propos', // Page À Propos
+    element: <APropos />
   }
 ])
 

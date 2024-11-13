@@ -1,10 +1,16 @@
-import NavLink from "../../atoms/Link/NavLink";
+import CustomNavLink from '../../atoms/Link/CustomNavLink'
 
 export default function Nav() {
-    return (
-        <div>
-            <NavLink root={"/home"}   name={"Accueil"}/>
-            <NavLink root={"/home"}   name={"Accueil"}/>
-        </div>
-    )
+  return (
+    <div>
+      <CustomNavLink
+        root={'/home'}
+        name={'Accueil'}
+      />
+      <CustomNavLink
+        root={'/a-propos'}
+        name={'A Propos'}
+      />
+    </div>
+  )
 }
