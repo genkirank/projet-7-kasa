@@ -1,5 +1,5 @@
+import Footer from '../organisms/Header/Footer/Footer'
 import Header from '../organisms/Header/Header'
-import Footer from '../organisms/Footer/Footer'
 function PageLayout() {
   return (
     <>

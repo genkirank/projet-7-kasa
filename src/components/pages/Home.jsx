@@ -1,11 +1,9 @@
-import Nav from '../molecules/Nav/Nav'
-import StyleGuide from './Stylesguides'
+import PageLayout from '../templates/PageLayout'
 
 export default function Home() {
   return (
     <>
-      <p>cezzat</p>
-      <StyleGuide />
+      <PageLayout />
     </>
   )
 }

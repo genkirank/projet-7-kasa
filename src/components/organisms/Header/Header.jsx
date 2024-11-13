@@ -4,7 +4,7 @@ import Nav from '../../molecules/Nav/Nav'
 export default function Header() {
   return (
     <>
-      <Logo />
+      <Logo className="" />
       <Nav />
     </>
   )

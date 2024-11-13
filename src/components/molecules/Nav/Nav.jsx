@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <div>
       <CustomNavLink
-        root={'/home'}
+        root={'/'}
         name={'Accueil'}
       />
       <CustomNavLink

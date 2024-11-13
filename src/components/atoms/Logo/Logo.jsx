@@ -1,7 +1,13 @@
+import KasaLogo from '../Logo/KasaLogo.svg'
+import './LogoStyles.scss'
 export default function Logo() {
   return (
     <>
-      <h1>Logo</h1>
+      <img
+        src={KasaLogo}
+        alt='LogoKasa'
+        className={`logo `}
+      />
     </>
   )
 }
