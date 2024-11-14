@@ -1,4 +1,14 @@
 .logo {
-  color: yellow;
-  height: 20px;
+  &.header {
+    height: 30px;
+    .logo-path {
+      fill: blue;
+    }
+  }
+  &.footer {
+    height: 760px;
+    .logo-path {
+      fill: green;
+    }
+  }
 }
