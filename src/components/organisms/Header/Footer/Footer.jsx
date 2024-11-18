@@ -1,10 +1,10 @@
 import Logo from '../../../atoms/Logo/Logo'
-
+import './Footer.scss'
 export default function Footer() {
   return (
-    <>
-      <h1>Footer</h1>
-      <Logo className='footer' />
-    </>
+    <div className='Stylefooter'>
+      <Logo />
+      <h1 className='stylewords'>© 2020 Kasa. All rights reserved</h1>
+    </div>
   )
 }
