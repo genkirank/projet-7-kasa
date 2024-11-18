@@ -1,8 +1,11 @@
 import CustomNavLink from '../../atoms/Link/CustomNavLink'
+import Logo from '../../atoms/Logo/Logo'
+import './StyleNav.scss'
 
 export default function Nav() {
   return (
-    <div>
+    <div className='StyleNav'>
+      <Logo isHeader={true} />
       <CustomNavLink
         root={'/'}
         name={'Accueil'}
