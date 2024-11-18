@@ -4,7 +4,7 @@ import './Header.scss'
 export default function Header() {
   return (
     <div className='StyleHeader'>
-      <Logo />
+      <Logo isHeader={true} />
       <Nav />
     </div>
   )
