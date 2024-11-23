@@ -1,0 +1,32 @@
+.collapse-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ff6060;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.67px;
+  text-align: left;
+  color: white;
+  text-decoration-skip-ink: none;
+}
+.content {
+  background-color: #f6f6f673;
+}
+.arrow {
+  display: block;
+  > svg path {
+    display: block;
+  }
+}
+
+.arrow.active {
+  display: none;
+  > svg path {
+    display: none;
+  }
+}

@@ -1,15 +1,17 @@
 import './MultySquare.scss'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Square from '../../atoms/Square/Square'
 import { fetchData } from '../../atoms/fetchData/fetchData'
 
 export default function MultySquare() {
+  const maxItem = 6
   const [items, setItems] = useState([])
   useEffect(() => {
     async function loadData() {
       const data = await fetchData('/backend.json')
       if (data && Array.isArray(data)) {
-        setItems(data)
+        setItems(data.slice(0, maxItem))
       }
     }
     loadData()
@@ -19,12 +21,15 @@ export default function MultySquare() {
     <div className='wrap'>
       {items.length > 0
         ? items.map((item) => (
-            <Square
+            <Link
+              className='no-decoration'
               key={item.id}
-              title={item.title}
-            />
+              to={`/fichelogement/${item.title}`}
+            >
+              <Square title={item.title} />
+            </Link>
           ))
-        : 'Chargement...'}
+        : 'Titre de la location'}
     </div>
   )
 }
