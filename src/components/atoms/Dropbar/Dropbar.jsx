@@ -17,7 +17,7 @@ export default function Dropbar({ Data }) {
           alt='Flèche haut'
           className={visible ? 'arrow active' : 'arrow'}
         />
-        <Arrow_bottom className={visible ? 'arrow ' : 'arrow activeë'} />
+        <Arrow_bottom className={visible ? 'arrow ' : 'arrow active'} />
       </button>
       {visible && (
         <div className='content'>

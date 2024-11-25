@@ -1,9 +1,11 @@
 .collapse-btn {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   background-color: #ff6060;
   align-items: center;
+  border: none;
+  border-radius: 5px;
+  width: 48%;
+  justify-content: space-between;
 }
 
 .title {
@@ -12,10 +14,12 @@
   line-height: 25.67px;
   text-align: left;
   color: white;
-  text-decoration-skip-ink: none;
 }
-.content {
+.content p {
   background-color: #f6f6f673;
+  width: 48%;
+  margin-top: 0px;
+  border-radius: 0px 0px 5px 5px;
 }
 .arrow {
   display: block;
