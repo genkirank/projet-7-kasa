@@ -13,3 +13,9 @@
     fill: white;
   }
 }
+@media (max-width: 768px) {
+  .logo-container.header {
+    height: 46px;
+    width: 145px;
+  }
+}

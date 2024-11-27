@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .styleRh {
     border-radius: 10px;
     height: 111px;
@@ -71,8 +71,8 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    height: 48px;
+    width: 198px;
+    padding: 16px 16px;
   }
 }

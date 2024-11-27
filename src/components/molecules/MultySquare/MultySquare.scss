@@ -3,12 +3,13 @@
   text-decoration: none;
 }
 .wrap {
+  justify-content: center;
   gap: 60px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   max-width: 1240px;
-  height: 829px;
+  height: auto;
   padding: 50px;
   box-sizing: border-box;
   text-decoration: none;
@@ -18,17 +19,16 @@
 @media (max-width: 1024px) {
   .wrap {
     display: flex;
-    max-width: 90%; /* Réduire la largeur totale */
-    padding: 30px; /* Réduire le padding */
-    height: auto; /* Hauteur flexible pour s'adapter au contenu */
+    max-width: 90%;
+    padding: 22px;
+    height: auto;
   }
 }
 
 /* Pour les smartphones (768px et moins) */
 @media (max-width: 768px) {
   .wrap {
-    flex-direction: column; /* Passer les éléments en colonne */
-    gap: 20px; /* Réduire encore l'espacement */
-    padding: 20px; /* Padding plus compact */
+    flex-direction: column;
+    gap: 20px;
   }
 }

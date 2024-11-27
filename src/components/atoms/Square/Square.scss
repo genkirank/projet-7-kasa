@@ -15,3 +15,15 @@
   line-height: 25.67px;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .square {
+    height: 255px;
+    height: 335px;
+  }
+  .titles {
+    text-align: left;
+    width: 295px;
+    height: 52px;
+  }
+}

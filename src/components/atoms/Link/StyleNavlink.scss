@@ -10,3 +10,10 @@
     text-decoration: underline;
   }
 }
+
+@media (max-width: 768px) {
+  .custom-navlink {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+}

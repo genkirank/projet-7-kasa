@@ -9,4 +9,15 @@
 }
 .stylewords {
   color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: center;
+}
+@media (max-width: 528px) {
+  .stylewords {
+    line-height: 17.11px;
+    font-size: 12px;
+    width: 130px;
+  }
 }
