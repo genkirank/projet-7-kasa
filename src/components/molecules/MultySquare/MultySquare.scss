@@ -1,3 +1,7 @@
+/* Pour les grands écrans (desktop) */
+.no-decoration {
+  text-decoration: none;
+}
 .wrap {
   gap: 60px;
   align-items: center;
@@ -7,7 +11,24 @@
   height: 829px;
   padding: 50px;
   box-sizing: border-box;
-}
-.no-decoration {
   text-decoration: none;
+}
+
+/* Pour les tablettes (1024px et moins) */
+@media (max-width: 1024px) {
+  .wrap {
+    display: flex;
+    max-width: 90%; /* Réduire la largeur totale */
+    padding: 30px; /* Réduire le padding */
+    height: auto; /* Hauteur flexible pour s'adapter au contenu */
+  }
+}
+
+/* Pour les smartphones (768px et moins) */
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column; /* Passer les éléments en colonne */
+    gap: 20px; /* Réduire encore l'espacement */
+    padding: 20px; /* Padding plus compact */
+  }
 }

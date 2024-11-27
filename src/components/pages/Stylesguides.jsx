@@ -22,7 +22,10 @@ export default function StyleGuide() {
       <Square />
       <MultySquare />
       <Carrousel />
-      <Dropbar Data={'hello world'} />
+      <Dropbar />
+      <Dropbar />
+      <Dropbar />
+      <Dropbar />
     </>
   )
 }
