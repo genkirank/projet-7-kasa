@@ -1,45 +1,27 @@
 import './Dropbar.scss'
-import arrowTop from './arrow_top.png'
-import React, { useEffect, useState } from 'react'
-import { ReactComponent as Arrow_bottom } from './Arrow_bottom.svg'
-import { fetchData } from '../fetchData/fetchData'
+import { ReactComponent as ArrowTop } from './arrow-up.svg'
+import React, { useState } from 'react'
 
-export default function Dropbar({ itemId }) {
-  const [visible, setVisible] = useState(false)
-  const [data, setData] = useState({ title: '', content: '' })
-
-  useEffect(() => {
-    async function loadItemData() {
-      const allData = await fetchData()
-      if (allData) {
-        const item = allData.find((entry) => entry.id === itemId)
-        if (item) {
-          setData({ title: item.title, content: item.description })
-        }
-      }
-    }
-    loadItemData()
-  }, [itemId])
+export default function Dropbar({ title, content }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const clickOpen = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <div className='collapse'>
+    <div className='dropbar'>
       <button
-        className='collapse-btn'
-        onClick={() => setVisible(!visible)}
+        className='dropbar__button'
+        onClick={clickOpen}
+        aria-expanded={isOpen}
       >
-        <h1 className='title'>{data.title}</h1>
-        <img
-          src={arrowTop}
-          alt='Flèche haut'
-          className={visible ? 'arrow active' : 'arrow'}
-        />
-        <Arrow_bottom className={visible ? 'arrow ' : 'arrow active'} />
+        <h1 className='dropbar__title'>{title}</h1>
+        <ArrowTop className={`dropbar__arrow ${isOpen ? 'dropbar__arrow--rotate' : ''}`} />
       </button>
-      {visible && (
-        <div className='content'>
-          <p>{data.content}</p>
-        </div>
-      )}
+
+      <div className={`dropbar__content ${isOpen ? 'dropbar__content--open' : ''}`}>
+        <p>{content}</p>
+      </div>
     </div>
   )
 }

@@ -7,7 +7,10 @@
   height: 100%;
 }
 .page-content {
-  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   height: 100%;
   margin: 50px 00px 50px 00px;
 }

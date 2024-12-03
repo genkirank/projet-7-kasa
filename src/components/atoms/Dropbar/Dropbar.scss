@@ -1,36 +1,88 @@
-.collapse-btn {
+/* Bloc principal */
+.dropbar {
+  width: 100%;
+}
+
+/* Bouton du collapse */
+.dropbar__button {
+  height: auto;
   display: flex;
   background-color: #ff6060;
   align-items: center;
   border: none;
   border-radius: 5px;
-  width: auto;
+  width: 100%;
   justify-content: space-between;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.title {
-  font-size: 18px;
+/* Titre */
+.dropbar__title {
+  margin: 0%;
+  height: 100%;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 25.67px;
+  line-height: 34px;
   text-align: left;
   color: white;
 }
-.content p {
+
+/* Contenu caché par défaut */
+.dropbar__content {
   background-color: #f6f6f673;
-  width: 48%;
-  margin-top: 0px;
-  border-radius: 0px 0px 5px 5px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, opacity 0.5s ease;
 }
-.arrow {
-  display: block;
-  > svg path {
-    display: block;
+
+/* Contenu visible */
+.dropbar__content--open {
+  opacity: 1;
+  max-height: 500px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
+  text-align: left;
+}
+
+/* Flèche */
+.dropbar__arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Modificateur pour la flèche tournée */
+.dropbar__arrow--rotate {
+  transform: rotate(180deg);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .dropbar__button {
+    padding: 6px 10px;
+  }
+
+  .dropbar__title {
+    font-size: 18px;
   }
 }
 
-.arrow.active {
-  display: none;
-  > svg path {
-    display: none;
+@media (max-width: 480px) {
+  .dropbar__button {
+    padding: 5px 8px;
+    max-width: 335px;
+    height: 33px;
+  }
+
+  .dropbar__title {
+    display: contents;
+    font-size: 13px;
+  }
+  .dropbar__content--open {
+    font-size: 12px;
+    line-height: 17.11px;
   }
 }

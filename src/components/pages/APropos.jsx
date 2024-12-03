@@ -1,12 +1,21 @@
 import Dropbar from '../atoms/Dropbar/Dropbar'
 import '../../assets/Apropos.scss'
+import { apropoData } from '../Database/Database.js'
 import RectangleHome from '../atoms/Rectanglebg/RectangleHome'
-import StyleGuide from './StylesGuides'
 export default function APropos() {
+  console.log(apropoData)
   return (
     <>
       <RectangleHome />
-      <Dropbar />
+      <div className='alignement'>
+        {apropoData.apropos.map((item) => (
+          <Dropbar
+            key={item.id}
+            title={item.title}
+            content={item.description}
+          />
+        ))}
+      </div>
     </>
   )
 }
