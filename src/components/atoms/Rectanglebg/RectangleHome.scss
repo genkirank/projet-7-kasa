@@ -64,7 +64,7 @@
 
 @media (max-width: 768px) {
   .styleRh {
-    max-width: 335px;
+    max-width: 80%;
   }
 
   .stylebghword.active {
@@ -74,5 +74,10 @@
     height: 48px;
     width: 198px;
     padding: 16px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .styleRh {
+    max-width: 335px;
   }
 }

@@ -1,11 +1,25 @@
 import './Dropbar.scss'
 import { ReactComponent as ArrowTop } from './arrow-up.svg'
 import React, { useState } from 'react'
-
-export default function Dropbar({ title, content }) {
+export default function Dropbar({ title, description, equipements }) {
   const [isOpen, setIsOpen] = useState(false)
   const clickOpen = () => {
     setIsOpen(!isOpen)
+  }
+
+  const renderContent = () => {
+    if (description) {
+      return <p>{description}</p>
+    } else if (equipements && Array.isArray(equipements)) {
+      return (
+        <ul>
+          {equipements.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      )
+    }
+    return null
   }
 
   return (
@@ -19,9 +33,7 @@ export default function Dropbar({ title, content }) {
         <ArrowTop className={`dropbar__arrow ${isOpen ? 'dropbar__arrow--rotate' : ''}`} />
       </button>
 
-      <div className={`dropbar__content ${isOpen ? 'dropbar__content--open' : ''}`}>
-        <p>{content}</p>
-      </div>
+      <div className={`dropbar__content ${isOpen ? 'dropbar__content--open' : ''}`}>{renderContent()}</div>
     </div>
   )
 }

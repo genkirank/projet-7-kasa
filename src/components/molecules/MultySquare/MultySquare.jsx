@@ -24,7 +24,7 @@ export default function MultySquare() {
             <Link
               className='no-decoration'
               key={item.id}
-              to={`/fichelogement/${item.title}`}
+              to={`/fichelogement/${item.id}`}
             >
               <Square title={item.title} />
             </Link>
