@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 import { fetchData } from '../atoms/fetchData/fetchData'
 import '../../assets/FicheLogement.scss'
 import Ratting from '../atoms/Ratting/Ratting'
+import Tag from '../atoms/tag/Tag'
+import Host from '../atoms/Host/Host'
 export default function FicheLogements() {
   const { id } = useParams()
   const [item, setItem] = useState(null)
@@ -33,19 +35,29 @@ export default function FicheLogements() {
   return (
     <>
       <Carrousel pictures={item.pictures} />
-      <h1>{item.title}</h1>
-      <h2>{item.location}</h2>
+      <div>
+        <h1 className='title'>{item.title}</h1>
+        <h2 className='location'>{item.location}</h2>
+      </div>
       <div className='DropbarConteneur'>
         <Ratting rating={item.rating} />
-        <Dropbar
-          title={'equipements'}
-          equipements={item.equipments}
-        />
-
-        <Dropbar
-          title={'description'}
-          description={item.description}
-        />
+        <div>
+          <Tag tags={item.tags} />
+          <Host
+            name={item.host.name}
+            picture={item.host.picture}
+          />
+        </div>
+        <div>
+          <Dropbar
+            title={'equipements'}
+            equipements={item.equipments}
+          />
+          <Dropbar
+            title={'description'}
+            description={item.description}
+          />
+        </div>
       </div>
     </>
   )
