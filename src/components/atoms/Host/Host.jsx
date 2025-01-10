@@ -1,3 +1,4 @@
+import './Host.scss'
 export default function Host({ name, picture }) {
   return (
     <div className='host-container'>
