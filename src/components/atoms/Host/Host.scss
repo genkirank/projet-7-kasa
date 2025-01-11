@@ -1,23 +1,46 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/breakpoints.scss';
+
 .host {
   &-container {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     flex-direction: row;
     gap: 10px;
   }
 
   &-name {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 25.67px;
+    line-height: 17px;
     text-align: right;
-    color: #ff6060;
+    color: $primary-color;
+
+    @include tablet {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 25.67px;
+    }
   }
 
   &-picture {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     object-fit: cover;
+
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include desktop {
+      width: 64px;
+      height: 64px;
+    }
   }
 }

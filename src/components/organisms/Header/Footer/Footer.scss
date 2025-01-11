@@ -1,23 +1,24 @@
+@import '../../../../styles/_variables.scss';
+@import '../../../../styles/_mixins.scss';
+
 .Stylefooter {
-  display: flex;
-  background-color: black;
+  @include flex-center;
+  background-color: $black;
   width: 100%;
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  padding: 66px 00px 29px;
+  padding: 66px 0 29px;
 }
+
 .stylewords {
-  color: white;
-  font-size: 24px;
-  font-weight: 500;
+  color: $white;
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
   line-height: 34.22px;
   text-align: center;
-}
-@media (max-width: 528px) {
-  .stylewords {
+
+  @include mobile {
     line-height: 17.11px;
-    font-size: 12px;
+    font-size: $font-size-small;
     width: 130px;
   }
 }

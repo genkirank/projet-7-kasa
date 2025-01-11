@@ -1,7 +1,23 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
 .StyleHeader {
   margin-top: 45px;
-  display: flex;
-  flex-direction: row;
+  @include flex-between;
   width: 90%;
-  justify-content: space-between;
+
+  @include mobile {
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  @include tablet {
+    margin-top: 30px;
+    width: 95%;
+  }
+
+  @include desktop {
+    width: $container-width;
+    max-width: 90%;
+  }
 }

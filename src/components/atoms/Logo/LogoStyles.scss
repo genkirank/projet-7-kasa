@@ -1,21 +1,29 @@
-.logo-container.header {
-  height: 68px;
-  width: 210px;
-  > svg path {
-    fill: #ff6060;
-  }
-}
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
 
-.logo-container.footer {
-  height: 40px;
-  width: 122px;
-  > svg path {
-    fill: white;
-  }
-}
-@media (max-width: 768px) {
-  .logo-container.header {
-    height: 46px;
-    width: 145px;
+.logo {
+  &-container {
+    &.header {
+      height: $header-height;
+      width: $header-width;
+
+      > svg path {
+        fill: $primary-color;
+      }
+
+      @include mobile {
+        height: $mobile-header-height;
+        width: $mobile-header-width;
+      }
+    }
+
+    &.footer {
+      height: $footer-logo-height;
+      width: $footer-logo-width;
+
+      > svg path {
+        fill: $white;
+      }
+    }
   }
 }

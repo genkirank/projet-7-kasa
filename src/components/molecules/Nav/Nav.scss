@@ -1,6 +1,15 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
 .StyleNav {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   gap: 57px;
-  padding: auto;
+
+  @include mobile {
+    gap: 26px;
+  }
+
+  @include tablet {
+    gap: 40px;
+  }
 }
