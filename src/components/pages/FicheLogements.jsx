@@ -35,29 +35,33 @@ export default function FicheLogements() {
   return (
     <>
       <Carrousel pictures={item.pictures} />
-      <div>
-        <h1 className='title'>{item.title}</h1>
-        <h2 className='location'>{item.location}</h2>
-      </div>
       <div className='DropbarConteneur'>
-        <Ratting rating={item.rating} />
-        <div>
+        <div className='block1'>
+          <h1 className='title'>{item.title}</h1>
+          <h2 className='location'>{item.location}</h2>
           <Tag tags={item.tags} />
+        </div>
+        <div className='block2'>
           <Host
             name={item.host.name}
             picture={item.host.picture}
+            className='host'
+          />
+          <Ratting
+            rating={item.rating}
+            className='ratting'
           />
         </div>
-        <div>
-          <Dropbar
-            title={'equipements'}
-            equipements={item.equipments}
-          />
-          <Dropbar
-            title={'description'}
-            description={item.description}
-          />
-        </div>
+      </div>
+      <div className='block3'>
+        <Dropbar
+          title={'equipements'}
+          equipements={item.equipments}
+        />
+        <Dropbar
+          title={'description'}
+          description={item.description}
+        />
       </div>
     </>
   )

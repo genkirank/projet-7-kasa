@@ -6,9 +6,8 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 34.22px;
-  text-decoration: none;
   color: $text-color;
-
+  text-decoration: white;
   &.active {
     text-decoration: underline;
     color: $primary-color;

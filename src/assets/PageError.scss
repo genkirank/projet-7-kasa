@@ -1,0 +1,64 @@
+@import '../styles/_variables.scss';
+@import '../styles/_mixins.scss';
+
+.conteneur {
+  @include flex-column;
+  gap: 139px;
+  align-items: center;
+  margin-bottom: 139px;
+
+  @include mobile {
+    gap: 113px;
+    margin-bottom: 113px;
+  }
+}
+
+h1 {
+  color: $primary-color;
+  font-family: $font-montserrat;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 410.69px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 96px;
+    line-height: 136.9px;
+  }
+
+  @include mobile {
+    font-size: 96px;
+    line-height: 136.9px;
+  }
+}
+
+.h2 {
+  color: $primary-color;
+  font-family: $font-montserrat;
+  font-size: 36px;
+  font-weight: $font-weight-medium;
+  line-height: 51.34px;
+  text-align: left;
+
+  @include mobile {
+    font-size: $font-size-medium;
+    line-height: 25.67px;
+    text-align: center;
+    width: 260px;
+    height: 52px;
+  }
+}
+.custom-link {
+  text-decoration: underline;
+  color: $text-color;
+  font-family: $font-montserrat;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
+  line-height: 25.67px;
+  text-align: left;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 19.96px;
+  }
+}

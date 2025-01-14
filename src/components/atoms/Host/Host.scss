@@ -1,6 +1,6 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
-@import '../../../styles/breakpoints.scss';
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+@import '../../../styles/_breakpoints.scss';
 
 .host {
   &-container {
@@ -10,8 +10,9 @@
   }
 
   &-name {
+    font-family: $font-montserrat;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
     line-height: 17px;
     text-align: right;
     color: $primary-color;

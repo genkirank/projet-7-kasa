@@ -1,44 +1,65 @@
-.carousel-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  object-fit: cover;
-  border-radius: 25px;
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
+.carousel {
+  &-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 25px;
+    align-items: center;
+
+    @include mobile {
+      height: 255px;
+    }
+  }
+
+  &-image {
+    @include image-cover;
+    position: relative;
+    border-radius: 25px;
+
+    @include mobile {
+      height: 255px;
+    }
+  }
+
+  &-button {
+    &_prev,
+    &_next {
+      position: absolute;
+      width: 8%;
+      height: 100%;
+      z-index: 1;
+      background: none;
+      border: none;
+
+      @include mobile {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
 }
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 4vih;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 25px;
-  align-items: center;
-}
-.carousel-button_prev {
-  position: absolute;
-  width: 8%;
-  height: 100%;
-  z-index: 1;
-  background: none;
-  border: none;
-}
+
 .texte {
   position: absolute;
   z-index: 1;
   bottom: 2%;
-  color: white;
   left: 50%;
-  font-size: 18px;
-  font-weight: 500;
+  color: $white;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
   line-height: 25.67px;
   text-align: center;
-}
-.carousel-button_next {
-  width: 8%;
-  height: 100%;
-  right: 0;
-  position: absolute;
-  z-index: 1;
-  background: none;
-  border: none;
+
+  @include mobile {
+    display: none;
+  }
 }

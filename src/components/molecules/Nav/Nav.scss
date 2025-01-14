@@ -2,6 +2,7 @@
 @import '../../../styles/_mixins.scss';
 
 .StyleNav {
+  text-decoration: none;
   @include flex-center;
   gap: 57px;
 

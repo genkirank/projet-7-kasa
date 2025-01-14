@@ -9,11 +9,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <PageLayout />,
-    errorElement: <PageError />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/fichelogement/:id', element: <FicheLogements /> }, // Utilisation de ':id'
-      { path: '/a-propos', element: <APropos /> }
+      { path: '/a-propos', element: <APropos /> },
+      { path: '*', element: <PageError /> }
     ]
   }
 ])

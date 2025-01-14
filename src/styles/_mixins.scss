@@ -12,6 +12,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 // Media queries
 @mixin mobile {
@@ -37,4 +42,9 @@
   max-width: $container-width;
   margin: 0 auto;
   padding: 0 20px;
+}
+@mixin image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
