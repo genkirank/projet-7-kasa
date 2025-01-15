@@ -26,7 +26,10 @@ export default function MultySquare() {
               key={item.id}
               to={`/fichelogement/${item.id}`}
             >
-              <Square title={item.title} />
+              <Square
+                image={item.cover}
+                title={item.title}
+              />
             </Link>
           ))
         : 'Titre de la location'}

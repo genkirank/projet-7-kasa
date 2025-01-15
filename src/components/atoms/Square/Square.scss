@@ -1,28 +1,44 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
 .square {
-  background-color: #ff6060;
   height: 340px;
   width: 340px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   border-radius: 10px;
+  z-index: 2;
+
+  &-cover {
+    border-radius: 10px;
+    z-index: 1;
+    height: 340px;
+    width: 340px;
+    object-fit: cover;
+    position: absolute;
+
+    @include mobile {
+      height: 335px;
+    }
+  }
+
+  @include mobile {
+    height: 335px;
+  }
 }
 
 .titles {
-  font-family: Montserrat;
+  font-family: $font-montserrat;
   margin: 20px;
-  color: white;
-  font-size: 18px;
+  color: $white;
+  font-size: $font-size-medium;
   font-weight: 700;
   line-height: 25.67px;
   text-decoration: none;
-}
+  z-index: 3;
+  position: relative;
 
-@media (max-width: 768px) {
-  .square {
-    height: 255px;
-    height: 335px;
-  }
-  .titles {
+  @include mobile {
     text-align: left;
     width: 295px;
     height: 52px;
