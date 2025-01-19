@@ -5,10 +5,10 @@
   @include flex-center;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 
   @include mobile {
     width: 100%;
+    height: 100%;
   }
 }
 

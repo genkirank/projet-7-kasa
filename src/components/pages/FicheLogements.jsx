@@ -33,27 +33,27 @@ export default function FicheLogements() {
   if (!item) return <div>Chargement ou élément non trouvé...</div>
 
   return (
-    <>
+    <div className='fiche-logement'>
       <Carrousel pictures={item.pictures} />
-      <div className='DropbarConteneur'>
-        <div className='block1'>
-          <h1 className='title'>{item.title}</h1>
-          <h2 className='location'>{item.location}</h2>
+      <div className='fiche-logement__content'>
+        <div className='fiche-logement__info'>
+          <h1 className='fiche-logement__title'>{item.title}</h1>
+          <h2 className='fiche-logement__location'>{item.location}</h2>
           <Tag tags={item.tags} />
         </div>
-        <div className='block2'>
+        <div className='fiche-logement__host-rating'>
           <Host
             name={item.host.name}
             picture={item.host.picture}
-            className='host'
+            className='fiche-logement__host'
           />
           <Ratting
             rating={item.rating}
-            className='ratting'
+            className='fiche-logement__rating'
           />
         </div>
       </div>
-      <div className='block3'>
+      <div className='fiche-logement__details'>
         <Dropbar
           title={'equipements'}
           equipements={item.equipments}
@@ -63,6 +63,6 @@ export default function FicheLogements() {
           description={item.description}
         />
       </div>
-    </>
+    </div>
   )
 }

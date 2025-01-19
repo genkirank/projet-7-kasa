@@ -1,4 +1,3 @@
-import CustomNavLink from '../atoms/Link/CustomNavLink'
 import '../../assets/PageError.scss'
 export default function PageError() {
   return (

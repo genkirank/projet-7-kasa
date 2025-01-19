@@ -1,25 +1,25 @@
 @import '../styles/_variables.scss';
 @import '../styles/_mixins.scss';
 
-.DropbarConteneur {
-  @include flex-between;
-  margin-top: 30px;
-  width: 100%;
+.fiche-logement {
+  &__content {
+    @include flex-between;
+    margin-top: 30px;
+    width: 100%;
 
-  @include mobile {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
   }
-}
 
-.block {
-  &1 {
+  &__info {
     @include flex-column;
     align-items: flex-start;
   }
 
-  &2 {
+  &__host-rating {
     @include flex-column;
 
     @include mobile {
@@ -29,43 +29,44 @@
     }
   }
 
-  &3 {
+  &__details {
     @include flex-between;
     width: 100%;
     gap: 76px;
     margin-top: 24px;
+    align-items: normal;
 
     @include mobile {
       flex-direction: column;
       gap: 20px;
     }
   }
-}
 
-.title {
-  color: $primary-color;
-  margin: 0;
-  font-family: $font-montserrat;
-  font-size: $font-size-large;
-  font-weight: $font-weight-medium;
-  line-height: 25.67px;
-  text-align: left;
+  &__title {
+    color: $primary-color;
+    margin: 0;
+    font-family: $font-montserrat;
+    font-size: $font-size-large;
+    font-weight: $font-weight-medium;
+    line-height: 25.67px;
+    text-align: left;
 
-  @include mobile {
-    font-size: $font-size-medium;
+    @include mobile {
+      font-size: $font-size-medium;
+    }
   }
-}
 
-.location {
-  margin: 0;
-  font-family: $font-montserrat;
-  font-size: $font-size-medium;
-  font-weight: $font-weight-medium;
-  line-height: 25.67px;
-  text-align: left;
+  &__location {
+    margin: 0;
+    font-family: $font-montserrat;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: 25.67px;
+    text-align: left;
 
-  @include mobile {
-    font-size: 14px;
-    line-height: 19.96px;
+    @include mobile {
+      font-size: 14px;
+      line-height: 19.96px;
+    }
   }
 }

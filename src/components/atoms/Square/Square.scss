@@ -18,12 +18,14 @@
     position: absolute;
 
     @include mobile {
-      height: 335px;
+      height: 255px;
+      width: 335px;
     }
   }
 
   @include mobile {
-    height: 335px;
+    height: 255px;
+    width: 335px;
   }
 }
 

@@ -5,11 +5,11 @@
   @include flex-column;
   gap: 139px;
   align-items: center;
-  margin-bottom: 139px;
+  margin-bottom: 89px;
 
   @include mobile {
     gap: 113px;
-    margin-bottom: 113px;
+    margin-bottom: 63px;
   }
 }
 
