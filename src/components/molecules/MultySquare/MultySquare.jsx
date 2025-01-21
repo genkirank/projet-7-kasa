@@ -32,7 +32,7 @@ export default function MultySquare() {
               />
             </Link>
           ))
-        : 'Titre de la location'}
+        : 'Plus de locations disponibles '}
     </div>
   )
 }
