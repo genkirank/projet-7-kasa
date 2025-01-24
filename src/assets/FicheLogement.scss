@@ -21,7 +21,7 @@
 
   &__host-rating {
     @include flex-column;
-
+    align-items: end;
     @include mobile {
       @include flex-between;
       flex-direction: row-reverse;

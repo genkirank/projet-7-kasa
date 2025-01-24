@@ -2,7 +2,7 @@ import '../../assets/PageError.scss'
 export default function PageError() {
   return (
     <div className='conteneur'>
-      <h1>404</h1>
+      <div className='titres'>404</div>
       <div className='h2'>Oups! La page que vous demandez n'existe pas.</div>
       <a
         className='custom-link'

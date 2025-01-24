@@ -13,8 +13,8 @@ export default function Dropbar({ title, description, equipements }) {
     } else if (equipements && Array.isArray(equipements)) {
       return (
         <ul>
-          {equipements.map((item, id) => (
-            <li key={id}>{item}</li>
+          {equipements.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       )

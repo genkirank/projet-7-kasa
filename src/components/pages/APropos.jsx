@@ -6,7 +6,7 @@ import RectangleHome from '../atoms/Rectanglebg/RectangleHome'
 export default function APropos() {
   console.log(apropoData)
   return (
-    <>
+    <div className='container-apropos'>
       <RectangleHome BG={Aproposbg} />
       <div className='alignement'>
         {apropoData.apropos.map((item) => (
@@ -17,6 +17,6 @@ export default function APropos() {
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }

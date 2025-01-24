@@ -13,12 +13,13 @@
   }
 }
 
-h1 {
+.titres {
+  line-height: 263px;
+  margin: 0%;
   color: $primary-color;
   font-family: $font-montserrat;
   font-size: 288px;
   font-weight: 700;
-  line-height: 410.69px;
   text-align: center;
 
   @include tablet {

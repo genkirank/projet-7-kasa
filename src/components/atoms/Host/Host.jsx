@@ -1,8 +1,14 @@
 import './Host.scss'
 export default function Host({ name, picture }) {
+  const split = name.split(' ')
+  console.log(split)
   return (
     <div className='host-container'>
-      <h2 className='host-name'>{name}</h2>
+      <dir className='host-container_split'>
+        <h2 className='host-name'>{split[0]}</h2>
+        <h2 className='host-name'>{split[1]}</h2>
+      </dir>
+
       <img
         src={picture}
         alt={name}

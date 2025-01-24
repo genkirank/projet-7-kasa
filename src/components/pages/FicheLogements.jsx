@@ -55,12 +55,12 @@ export default function FicheLogements() {
       </div>
       <div className='fiche-logement__details'>
         <Dropbar
-          title={'equipements'}
-          equipements={item.equipments}
+          title={'Description'}
+          description={item.description}
         />
         <Dropbar
-          title={'description'}
-          description={item.description}
+          title={'Équipements'}
+          equipements={item.equipments}
         />
       </div>
     </div>

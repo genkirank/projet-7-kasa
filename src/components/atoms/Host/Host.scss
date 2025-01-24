@@ -7,9 +7,15 @@
     @include flex-center;
     flex-direction: row;
     gap: 10px;
+    &_split {
+      flex-direction: column;
+      padding: 0%;
+      margin: 0%;
+    }
   }
 
   &-name {
+    margin: 0%;
     font-family: $font-montserrat;
     font-size: 12px;
     font-weight: $font-weight-medium;

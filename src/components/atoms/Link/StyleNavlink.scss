@@ -10,7 +10,6 @@
   text-decoration: white;
   &.active {
     text-decoration: underline;
-    color: $primary-color;
   }
 
   @include mobile {
