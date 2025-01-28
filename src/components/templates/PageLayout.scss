@@ -16,13 +16,12 @@
   @include flex-center;
   flex-direction: column;
   width: 90%;
-  max-height: 150dvh;
   margin: 50px 0;
+  height: auto;
 
   @include mobile {
     width: 90%;
     max-height: none;
-    height: 100%;
     margin: 20px 0;
   }
 

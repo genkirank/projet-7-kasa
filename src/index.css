@@ -3,4 +3,16 @@
 @import './styles/_breakpoints.scss';
 body {
   margin: 0%;
+  height: fit-content;
+}
+html {
+  height: auto;
+}
+
+#root {
+  height: auto;
+}
+canvas {
+  height: auto;
+  aspect-ratio: 375 / auto;
 }

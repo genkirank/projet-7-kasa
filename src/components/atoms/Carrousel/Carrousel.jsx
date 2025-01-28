@@ -16,27 +16,38 @@ export default function Carrousel({ pictures }) {
   if (!pictures || pictures.length === 0) {
     return <div>Chargement...</div>
   }
-
+  const isSingleImage = pictures.length === 1
   return (
     <div className='carousel-container'>
-      <button
-        onClick={showPrevImage}
-        className='carousel-button_prev'
-      >
-        <ArrowPrev />
-      </button>
+      {/* Bouton précédent */}
+      {!isSingleImage && (
+        <button
+          onClick={showPrevImage}
+          className='carousel-button_prev'
+        >
+          <ArrowPrev />
+        </button>
+      )}
+
+      {/* Image affichée */}
       <img
         src={pictures[imageIndex]}
         alt={`Image ${imageIndex + 1}`}
         className='carousel-image'
       />
-      <p className='texte'>{`${imageIndex + 1}/${pictures.length}`}</p>
-      <button
-        onClick={showNextImage}
-        className='carousel-button_next'
-      >
-        <ArrowNext />
-      </button>
+
+      {/* Texte indiquant l'index */}
+      {!isSingleImage && <p className='texte'>{`${imageIndex + 1}/${pictures.length}`}</p>}
+
+      {/* Bouton suivant */}
+      {!isSingleImage && (
+        <button
+          onClick={showNextImage}
+          className='carousel-button_next'
+        >
+          <ArrowNext />
+        </button>
+      )}
     </div>
   )
 }
